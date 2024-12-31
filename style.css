@@ -30,8 +30,14 @@ body{
 }
 
 #timezone{
-  font-weight: 700;
-  opacity: 50%;
+  display: flex;
+  gap: .5em;
+  align-items: center;
+  justify-items: center;
+}
+
+#timezone-icon{
+  cursor: pointer;
 }
 
 #time{
@@ -42,4 +48,60 @@ body{
 #date{
   font-size: 1rem;
   font-weight: 700;
+}
+
+
+
+
+.timezone-modal {
+  display: none;
+}
+
+.timezone-modal.is-open {
+  display: block;
+}
+
+.timezone-modal-content{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0,0,0,0.65);
+}
+
+.content{
+  background-color: white;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  gap: .5em;
+  border-radius: .5em;
+}
+
+#timezones{
+  padding: .2em;
+  font-size: 1.2em;
+  outline: none;
+  border-radius: .3em;
+  background-color: transparent;
+}
+button{
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+#apply{
+  background-color: rgba(199, 193, 193, 0.603);
+  color: rgba(0, 0, 17, 0.808);
+  font-size: 1.3em;
+  padding: .2em;
+  border-radius: .5em;
+  border: 1px solid rgba(0, 0, 0, 0.479);
+  margin: 1em;
 }
